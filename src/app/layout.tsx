@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Grid, Paper } from "@mui/material";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { CustomThemeProvider } from "@/theme/theme-context-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +19,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <CustomThemeProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Paper elevation={0}>
+            <Grid container direction="column" sx={{ minHeight: "100vh" }}>
+              <Grid item>
+                <Header />
+              </Grid>
+              <Grid item sx={{ flexGrow: 1 }}>
+                {children}
+              </Grid>
+              <Grid item>
+                <Footer />
+              </Grid>
+            </Grid>
+          </Paper>
+        </body>
+      </html>
+    </CustomThemeProvider>
   );
 }

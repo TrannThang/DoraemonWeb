@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "banner-1",
+    "src": "https://res.cloudinary.com/dwksn9rn6/image/upload/v1711013582/banner/doraemon-banner-1_rddca1.png"
+  },
+  {
+    "id": 2,
+    "name": "banner-2",
+    "src": "https://res.cloudinary.com/dwksn9rn6/image/upload/v1711013586/banner/doraemon-banner-2_i0if4w.png"
+  },
+  {
+    "id": 3,
+    "name": "banner-3",
+    "src": "https://res.cloudinary.com/dwksn9rn6/image/upload/v1711013589/banner/doraemon-banner-3_akgj01.png"
+  }
+]
